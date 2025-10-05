@@ -8,7 +8,6 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <React.Fragment>
-      <div className='text-[10vw]'>Hello "__root"!</div>
       <Outlet />
     </React.Fragment>
   )
