@@ -1,12 +1,13 @@
 import { createFileRoute } from '@tanstack/react-router'
 import Task from '../components/Task';
+import TaskList from '../components/TaskList';
 
 export const Route = createFileRoute('/')({
   component: RouteComponent,
 })
 
 function RouteComponent() {
-  return <div className='bg-black w-full h-svh flex justify-center items-center'>
+  return <div className='bg-black w-full p-[5%] min-h-svh h-fit flex justify-center items-between'>
 
 
     <form onSubmit={(e) => {e.preventDefault();}} >
@@ -17,7 +18,7 @@ function RouteComponent() {
       </div>
 
       <ul className=' mt-[5%] flex flex-col justify-center items-center space-y-[2%] w-[50vw]'>
-        <Task task={`build the portfolio app`} />
+        <TaskList number={3} task={`build the portfolio app`} />
       </ul>
 
       
