@@ -9,8 +9,12 @@
     "fs:default",
     "fs:allow-write-text-file",
     "fs:allow-document-write",
-    "fs:allow-localdata-write"
-    
+    "fs:allow-localdata-write",
+    "fs:allow-appdata-write",
+    "fs:allow-localdata-read",
+    "fs:allow-mkdir",
+    "fs:allow-localdata-write-recursive",
+    "fs:allow-localdata-read-recursive"
     
   ]
 }

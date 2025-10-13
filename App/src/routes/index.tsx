@@ -1,8 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
 import Task from '../components/Task';
 import TaskList from '../components/TaskList';
-import { createAFile, createDirectory } from '../utils/fs';
-import { useEffect } from 'react';
+import { createDirectory, createTask } from '../utils/fs';
+import { useEffect, useState } from 'react';
 
 
 export const Route = createFileRoute('/')({
@@ -12,16 +12,16 @@ export const Route = createFileRoute('/')({
 function RouteComponent() {
 
 
-  
+  const [task,setTask] = useState(``)
   
 
   return <div className='bg-black w-full p-[5%] min-h-svh h-fit flex justify-center items-between'>
 
 
-    <form onSubmit={ (e) => {e.preventDefault();createDirectory() }} >
+    <form onSubmit={ (e) => {e.preventDefault();createDirectory() ;createTask({task: `hey`})}} >
 
       <div className='flex h-[5vw] w-[50vw] justify-center'>
-        <input type="text"  placeholder='task' className='bg-white/10 outline-0 p-[5%] rounded-l-[1vw] w-[30vw] text-[1.5vw] font-[Outfit] text-white' />
+        <input type="text"  placeholder='task' className='bg-white/10 outline-0 p-[5%] rounded-l-[1vw] w-[30vw] text-[1.5vw] font-[Outfit] text-white' onChange={e => setTask(e.target.value)} />
         <button type='submit' className='text-white font-[Outfit] font-bold text-[1.5vw] bg-blue-600 px-[5%] rounded-r-[1vw] cursor-pointer hover:bg-blue-700 transition-all duration-200 group'>Add</button>
       </div>
 
