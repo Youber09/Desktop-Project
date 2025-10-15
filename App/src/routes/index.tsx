@@ -40,8 +40,6 @@ function RouteComponent() {
         <button onClick={ async () => {
             await setTimeout(async () => {
               
-            
-
               await createTask({Todo: task});
               setErrorMessage(``)
               setRefresh(refresh + 1);
