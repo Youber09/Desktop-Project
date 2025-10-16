@@ -1,6 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
 import Task from '../components/Task';
-import TaskList from '../components/TaskList';
 import { createDirectory, createTask, readTasks } from '../utils/fs';
 import { useEffect, useState } from 'react';
 

@@ -1,6 +1,5 @@
 
-import { json } from "@tanstack/react-router/ssr/client";
-import { writeTextFile, readTextFile, BaseDirectory, mkdir, create, readDir, writeFile, readFile } from "@tauri-apps/plugin-fs";
+import { writeTextFile, readTextFile, BaseDirectory, mkdir, create, readDir} from "@tauri-apps/plugin-fs";
 
 const Dir = "Todo-app-data";
 
